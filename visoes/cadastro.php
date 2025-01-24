@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charser="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
 </head>
@@ -11,8 +11,8 @@
         <p>Nome: <input type="text" id="nome" name="nome" required></p>
         <p>Email: <input type="email" id="email" name="email" required></p>
         <p>Senha: <input type="password" id="senha" name="senha" required></p>
-        <button type="submit" name="acao" value="cadastrar">cadastrar</button>
+        <button type="submit" name="acao" value="cadastrar">Cadastrar</button>
     </form>
-    <p>Já possui conta ?  <a href="login.php"> Faça Login Aqui</a></p>
+    <p>Já possui conta ? <a href="login.php">Faça Login Aqui</a></p>
 </body>
 </html>

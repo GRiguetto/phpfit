@@ -1,31 +1,30 @@
 <?php
-//imcluir o arquibo d configuração principal do projeto
+// Inclui o arquivo de configurações Principal do Projeto.
 require_once '../configuracao.php';
 
-//incluir o modelo 'usuario' que contem as regras de negocios
-//contem os comandos para cadastrar, login
+// Inclui o modelo 'usuario', que contem as regras de negocios 
+// Contem os comandos para Cadastrar, Login
 
-require_once'../modelos/Usuario.php';
+require_once '../modelos/Usuario.php';
 
-//verificar se a requisição fpo deita usnaod o metodo post
+// Verifica se a requisição foi feita usando o método POST
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    //obtem a acao paassad no fomrulario, como 'cadastrar' ou 'login'
+    // Obtém a ação passada no formulário, como 'cadastrar' ou  'login'.
     $acao = $_POST['acao'];
 
-    // se a acao for "cadastrar" exeuta o fluxo de cadastro de usuario
+    // Se a ação for "cadastrar", executa o fluxo de cadastro de usuário
     if($acao == 'cadastrar'){
-        //obtrem os dados enviados pelo formulario de cadastro
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
+        // Óbtem os dados enviados pelo formulário de cadastro
+        $nome = $_POST['nome']; // Nome do usuario.
+        $email = $_POST['email']; // Email do usuário
         $senha = $_POST['senha'];
 
-        //chama p metodo caadsatrar da classe usuario que esta no modelo usuario
+        // Chama o Método cadastrar da classe usuário que esta no modelo usuario
         $resultado = Usuario::cadastrar($nome,$email,$senha);
-        //se o cadaastro for bem suceddo retorna true
+        // Se o cadastro for bem sucedido retorna true
         if($resultado === true){
-            //redireciona o usuario para a pagina de login com uma mensagem
-            header("Location: ". BASE_URL. "visoes/login.php?msg=Cadastro");
-
+            // Redireciona o usuário para a página de login com uma mensagem 
+            header("Location: ".BASE_URL."visoes/login.php?msg=Cadastrado");
         }else{
             header("Location: ".BASE_URL."visoes/login.php?msg=ERRO!");
         }
