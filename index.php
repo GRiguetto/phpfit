@@ -19,15 +19,24 @@ session_start();
         <li>
             <a href="visoes/dashboard.php">Painel Principal</a>
         </li>
+
         <li>
             <a href="controladores/UsuarioControlador.php?acao=logout">Sair</a>
         </li>
+
+        <li>
+            <a href="visoes/cadastro_exercicio.php">cadastro exercicio</a>
+        </li>
+
         <?php } else { ?>
         <li>
             <a href="visoes/login.php">Acessar Sistema</a>
         </li>
         <li>
             <a href="visoes/cadastro.php">Cadastrar</a>
+        </li>
+        <li>
+            <a href="visoes/cadastro_exercicio.php">cadastro_exercicio</a>
         </li>
     <?php } ?>
 </body>

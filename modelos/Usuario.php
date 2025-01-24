@@ -69,7 +69,16 @@ class Usuario{
             $_SESSION['usuario_nome'] = $usuario['nome'];
 
             return true;
-        }
+        }   
         return false;
+    }
+
+    //metodo para sair do sistema
+    public static function logout(){
+        session_start();
+
+        session_unset();
+
+        session_destroy();
     }
 }

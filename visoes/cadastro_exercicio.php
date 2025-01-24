@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Cadastrar Exercícios</h1>
+    <form action="../controladores/ExercicioControlador.php"
+    method="post" enctype="multipart/form-data">
+    
+    <p>Nome do Exercicio <input type="text" name="nome"></p>
+    <p>Grupo Muscular <input type="text" name="grupo_muscular"></p>
+    <p>Descrição <textarea name="descrição"></textarea></p>
+    <p>imagem <input type="file" name="imagem"></p>
+    <p>Vídeo <input type="file"name="video"></p>
+    <button type="submite">Cadastrar</button>
+    </form>
+</body>
+</html>
