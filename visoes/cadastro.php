@@ -12,6 +12,8 @@
         <p>Email: <input type="email" id="email" name="email" required></p>
         <p>Senha: <input type="password" id="senha" name="senha" required></p>
         <button type="submit" name="acao" value="cadastrar">Cadastrar</button>
+        <button type="reset">Apagar tudo</button>
+        
     </form>
     <p>Já possui conta ? <a href="login.php">Faça Login Aqui</a></p>
 </body>

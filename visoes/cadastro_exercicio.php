@@ -23,6 +23,7 @@
     <p>Imagem <input type="file" name="imagem"></p>
     <p>Vídeo <input type="file" name="video"></p>
     <button type="submit" name="acao" value="cadastrar">Cadastrar</button>
+    <button type="reset">Apagar tudo</button>
 
     </form>
 </body>
